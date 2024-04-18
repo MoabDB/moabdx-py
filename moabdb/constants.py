@@ -12,11 +12,12 @@ API_KEY = ""
 API_USERNAME = ""
 DB_URL = "https://api.moabdb.com/"
 
-DAILY_COLUMNS = ['Symbol', 'Date', 'Open', 'High', 'Low', 'Close', 'VWAP',\
-                 'BidPrc', 'AskPrc', 'Volume', 'Trades']
+DAILY_COLUMNS = ['Symbol','Time','Open','High','Low','Close',\
+                 'Volume','Trades','WgtdPrc','Bid','Ask']
 
-INTRA_COLUMNS = ['Symbol', 'Time', 'Trades', 'Volume', 'Imbalance', 'Close',\
-                 'VWAP', 'BidPrc', 'AskPrc', 'BidSz', 'AskSz']
+INTRA_COLUMNS = ['Symbol', 'Time', 'Open','High', 'Low', 'Close', \
+                 'Volume','Trades','WgtdPrc','VWAP','Imbalance','Bid','Ask',\
+                 'BidSz','AskSz']
 
 RATES_COLUMNS = ['Date', 'Treasury_1m', 'Treasury_2m', 'Treasury_3m',
                  'Treasury_4m', 'Treasury_6m', 'Treasury_1y', 'Treasury_2y',
