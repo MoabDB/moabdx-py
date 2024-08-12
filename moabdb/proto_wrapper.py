@@ -7,6 +7,12 @@ import requests
 from .protocol_pb2 import Request as _Req, Response as _Response
 from . import errors
 
+# IPv6 address takes about 180 seconds to connect
+# Dirty fix until a proper investigation is done
+# Might break other code the user runs if connecting to IPv6
+# pylint: disable=no-member
+requests.packages.urllib3.util.connection.HAS_IPV6 = False
+
 REQUEST = _Req
 RESPONSE = _Response
 

@@ -39,7 +39,6 @@ from .lib import _check_access, _server_req
 from .constants import pd, Union, cf
 
 
-
 def get_equity(tickers: Union[str, list],
                sample: str = "1m",
                start: str = None,
@@ -335,7 +334,7 @@ def get_rates(sample: str = "1y",
     # Check authorization
     if not _check_access():
         raise errors.MoabRequestError(
-            "Premium datasets needs API credentials, see moabdb.com")
+            "Premium datasets need API credentials, see moabdb.com")
 
     # String time to integer time
     start_tm, end_tm = timewindows.get_unix_dates(sample, start, end)
